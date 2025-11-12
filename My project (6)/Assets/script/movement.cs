@@ -10,7 +10,9 @@ public class movement : MonoBehaviour
 
     private Rigidbody2D shipRigidbody;
     private bool isAcceloration = false;
-    private bool isnegetiveAcceloration = false;
+    private bool isStoped = false;
+
+
     private bool isAlive = true;
 
 
@@ -25,7 +27,8 @@ public class movement : MonoBehaviour
         if (isAlive == true)
         {
             HandleShipAcceleration();
-            HandleShipRorarion();
+            
+            Handle2DAiming();
         }
     }
 
@@ -37,19 +40,22 @@ public class movement : MonoBehaviour
             shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity);
 
         }
-
-        if (isnegetiveAcceloration && isAlive)
+        if (isStoped && isAlive)
         {
             
-            shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity * 0.2f);
+            shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity* 0.1f);
 
         }
+
+
 
     }
 
     private void HandleShipAcceleration() {
         isAcceloration = Input.GetKey(KeyCode.W);
-        isnegetiveAcceloration = Input.GetKey(KeyCode.S);
+        isStoped = Input.GetKey(KeyCode.Space);
+        
+
     }
     private void HandleShipRorarion() {
         if (Input.GetKey(KeyCode.A)) { 
@@ -60,5 +66,29 @@ public class movement : MonoBehaviour
             transform.Rotate(-shipRotationspeed * Time.deltaTime * transform.forward);
         }
     
+    }
+    private void Handle2DAiming()
+    {
+        
+        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = 0f; 
+
+        
+        Vector3 direction = mouseWorldPosition - transform.position;
+
+        
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle - 90f);
+
+        
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            targetRotation,
+            shipRotationspeed * Time.deltaTime
+        );
+
+        
     }
 }
