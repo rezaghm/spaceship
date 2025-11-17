@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 10f;
-    public float lifeTime = 5f;
-    private Vector2 direction = Vector2.right;
+    [Header("Settings")]
+    public float speed =25f;        // سرعت قابل تنظیم از Inspector
+    public float lifeTime = 5f;      // زمان نابودی خودکار
+
+    private Vector2 direction = Vector2.zero;
     private Rigidbody2D rb;
 
     void Awake()
@@ -16,45 +16,57 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
+        // نابودی خودکار پس از مدت مشخص
         Destroy(gameObject, lifeTime);
-        // اگر هنوز جهت‌ دهی نشده بود، از جهت محلی استفاده کن
-        if (direction == Vector2.zero) direction = transform.up;
-        // اگر Rigidbody2D موجود باشه از velocity استفاده کن
-        if (rb != null)
-            rb.linearVelocity = direction.normalized * speed;
+
+        // اگر جهت تعیین نشده، از جهت محلی استفاده کن
+        if (direction == Vector2.zero)
+            direction = transform.up;
+
+        ApplyVelocity();
     }
 
-    // فراخوانی از Shooterها: فقط جهت
+    // تعیین جهت تیر
     public void SetDirection(Vector2 dir)
     {
         direction = dir.normalized;
-        if (rb != null)
-            rb.linearVelocity = direction * speed;
+        ApplyVelocity();
     }
 
-    // اوورلود: جهت + سرعت مختص به این شوت
+    // تعیین جهت + سرعت سفارشی (اختیاری)
     public void SetDirection(Vector2 dir, float customSpeed)
     {
         direction = dir.normalized;
-        if (rb != null)
-            rb.linearVelocity = direction * customSpeed;
-        else
-            speed = customSpeed;
+        speed = customSpeed;
+        ApplyVelocity();
     }
 
-    void Update()
+    // اعمال سرعت واقعی به Rigidbody2D
+    private void ApplyVelocity()
     {
-        // در صورتی که Rigidbody نداریم، با Translate حرکت کن
-        if (rb == null)
-            transform.Translate(direction * speed * Time.deltaTime, Space.World);
+        if (rb != null)
+        {
+            rb.linearVelocity = direction * speed;
+        }
     }
 
+    // برخورد با دشمن
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            Destroy(other.gameObject);   // حذف دشمن
+            Destroy(gameObject);         // حذف گلوله
+        }
+    }
+
+    void Update()
+    {
+        // اگر Rigidbody2D نداشتیم، دست‌ساز حرکتش بده
+        if (rb == null)
+        {
+            transform.Translate(direction * speed * Time.deltaTime, Space.World);
         }
     }
 }
+
