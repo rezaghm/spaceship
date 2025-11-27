@@ -700,15 +700,15 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1922843625700749132, guid: 096de83f37935a84c9e379dde8b1748f, type: 3}
   firePoint: {fileID: 2052131295}
   projectileSpeed: 25
-<<<<<<< Updated upstream
+
   fireRate: 0.5
 --- !u!1001 &1573267220
 PrefabInstance:
-=======
+
   fireRate: 0.3
 --- !u!114 &1433165048
-<<<<<<< Updated upstream
-=======
+
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -723,7 +723,7 @@ MonoBehaviour:
   hitCount: 0
   maxHits: 15
   delayBeforeStop: 10
---- !u!1 &2040317723
+--- !u!1 &2040317726
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -756,7 +756,7 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2040317725
->>>>>>> Stashed changes
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -773,7 +773,7 @@ MonoBehaviour:
   delayBeforeStop: 10
 --- !u!1 &2040317723
 GameObject:
->>>>>>> Stashed changes
+
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
