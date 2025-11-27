@@ -15,6 +15,7 @@ public class EnemyAi : MonoBehaviour
 
     void Update()
     {
+        if (playerTransform == null) return; 
         
         if (playerTransform != null)
         {
