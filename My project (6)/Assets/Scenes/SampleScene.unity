@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 1433165043}
   - component: {fileID: 1433165042}
   - component: {fileID: 1433165047}
+  - component: {fileID: 1433165048}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Untagged
@@ -572,7 +573,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &1433165044
 CircleCollider2D:
@@ -604,7 +605,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -699,9 +700,80 @@ MonoBehaviour:
   projectilePrefab: {fileID: 1922843625700749132, guid: 096de83f37935a84c9e379dde8b1748f, type: 3}
   firePoint: {fileID: 2052131295}
   projectileSpeed: 25
+<<<<<<< Updated upstream
   fireRate: 0.5
 --- !u!1001 &1573267220
 PrefabInstance:
+=======
+  fireRate: 0.3
+--- !u!114 &1433165048
+<<<<<<< Updated upstream
+=======
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433165041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b95433044881f249b93638cf9948e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipTriggerHandler
+  hitCount: 0
+  maxHits: 15
+  delayBeforeStop: 10
+--- !u!1 &2040317723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040317724}
+  - component: {fileID: 2040317725}
+  m_Layer: 0
+  m_Name: spawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2040317724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040317723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.2, y: 12.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2040317725
+>>>>>>> Stashed changes
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433165041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b95433044881f249b93638cf9948e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipTriggerHandler
+  hitCount: 0
+  maxHits: 15
+  delayBeforeStop: 10
+--- !u!1 &2040317723
+GameObject:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
