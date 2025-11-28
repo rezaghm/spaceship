@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class NewMovement : MonoBehaviour
 {
-    public float movementSpeed = 5.0f;
+    public float thrustForce = 15f;
+    public float maxSpeed = 10f;
     [SerializeField]
     private Rigidbody2D rb;
     
-    void Start()
+    void Update()
     {
-        
+        float moveX = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
+        float moveY = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
+
+
+        Vector2 movementDirection = new Vector2(moveX, moveY).normalized;
     }
 
 
@@ -21,19 +26,22 @@ public class NewMovement : MonoBehaviour
 
         Vector2 movementDirection = new Vector2(moveX, moveY).normalized;
 
-        // 2. Use AddForce to apply continuous push
-        // Use ForceMode.Force (default) for continuous acceleration
-        if (movementDirection.magnitude > 0.1f)
+        
+        
+            // Add a force in the direction of the input
+            rb.AddForce(movementDirection * thrustForce);
+        
+
+        // --- 3. Max Velocity Control (Clamping) ---
+        // If the ship is moving faster than maxSpeed, clamp the velocity
+        // We check the squared magnitude (sqrMagnitude) because it avoids a slow square root calculation
+        if (rb.linearVelocity.sqrMagnitude > maxSpeed * maxSpeed)
         {
-            rb.AddForce(movementDirection * movementSpeed * 10f); // Multiply by a factor (e.g., 10) to get a similar feeling speed
+            // Clamp the magnitude to maxSpeed while keeping the current direction
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
 
-        // Optional: Add code to limit max speed if AddForce makes it too fast
-        if (rb.linearVelocity.magnitude > movementSpeed)
-        {
-            rb.linearVelocity = rb.linearVelocity.normalized * movementSpeed;
-        }
-        //
+       
 
 
 

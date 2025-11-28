@@ -4,8 +4,7 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     [Header("ship power")]
-    [SerializeField] private float shipAccoleration = 10f;
-    [SerializeField] private float shipMaxVlocity = 10f;
+    
     [SerializeField] private float shipRotationspeed = 10f;
 
     //private Rigidbody2D shipRigidbody;
