@@ -1,0 +1,33 @@
+:root {
+}
+
+.heather {
+    align-self: center;
+    align-content: flex-start;
+    font-size: 100px;
+    color: rgb(105, 218, 197);
+}
+
+.button {
+    width: 220px;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 149, 237);
+    -unity-background-image-tint-color: rgb(58, 123, 187);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition-duration: 0.35s;
+    align-self: center;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.button:hover {
+    transition-duration: 0s;
+    scale: 1.1 1.1;
+}

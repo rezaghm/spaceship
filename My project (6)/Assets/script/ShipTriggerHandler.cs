@@ -20,6 +20,11 @@ public class ShipTriggerHandler : MonoBehaviour
                 isGameOver = true;
                 EndGame();
             }
+            else
+            {
+                // نمایش مربع بعدی در HealthBar
+                HealthBarManager.Instance.ShowNextSquare(hitCount);
+            }
         }
     }
 
@@ -49,6 +54,7 @@ public class ShipTriggerHandler : MonoBehaviour
 
         // چاپ پیام گیم اور
         Debug.Log("Game Over!");
+        GameOverManager.Instance.ShowGameOver();
     }
 }
 
