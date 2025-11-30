@@ -6,12 +6,19 @@ public class NewMovement : MonoBehaviour
     public float maxSpeed = 10f;
     [SerializeField]
     private Rigidbody2D rb;
-    
+    private Quaternion initialRotation;
+
+    void Start()
+    {
+        // Get the starting rotation of the object
+        initialRotation = transform.rotation;
+    }
+
     void Update()
     {
         float moveX = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
         float moveY = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
-
+         transform.rotation = initialRotation;
 
         Vector2 movementDirection = new Vector2(moveX, moveY).normalized;
     }

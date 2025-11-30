@@ -75,7 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372af602a715ae444b265ef109491f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMovement
-  movementSpeed: 5
+  thrustForce: 15
+  maxSpeed: 10
   rb: {fileID: 6765456355447893240}
 --- !u!212 &8642700363954466458
 SpriteRenderer:
@@ -123,7 +124,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7691294901476699688, guid: 1eb69abc28ce67449a8f8e1f0d7b28ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -313,8 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44bc69c3a735c846b9029e851242072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::movement
-  shipAccoleration: 7
-  shipMaxVlocity: 10
   shipRotationspeed: 15
 --- !u!114 &6474684834858644133
 MonoBehaviour:
