@@ -1,13 +1,21 @@
 
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShipTriggerHandler : MonoBehaviour
 {
     public int hitCount = 0;
     public int maxHits = 15;
-
+    public EnemySpawner spawner;
+    
     private bool isGameOver = false;
+
+    private void Start()
+    {
+        spawner =  GameObject.FindWithTag("spawner").GetComponent<EnemySpawner>();
+
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,6 +26,7 @@ public class ShipTriggerHandler : MonoBehaviour
             if (hitCount >= maxHits && !isGameOver)
             {
                 isGameOver = true;
+                spawner.isGameOver = true;
                 EndGame();
             }
         }
@@ -45,6 +54,16 @@ public class ShipTriggerHandler : MonoBehaviour
 
             Collider2D col = enemy.GetComponent<Collider2D>();
             if (col != null) col.enabled = false;
+        }
+
+        EnemySpawner[] spawner = Object.FindObjectsByType<EnemySpawner>(FindObjectsSortMode.None);
+        foreach (EnemySpawner spawner1 in spawner)
+        {
+            EnemySpawner spawn = spawner1.GetComponent<EnemySpawner>();
+
+            spawn.isGameOver = true;
+
+            
         }
 
         // چاپ پیام گیم اور
