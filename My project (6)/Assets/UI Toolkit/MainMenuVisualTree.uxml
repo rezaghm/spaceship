@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/mainMenu2.uss?fileID=7433441132597879392&amp;guid=2fb4013c456f89547890a08017908ee6&amp;type=3#mainMenu2" />
+    <ui:VisualElement name="container" style="flex-grow: 1; background-color: rgb(0, 0, 119); top: 0;">
+        <ui:Label text="Main Menu" name="header" triple-click-selects-line="false" class="header" style="-unity-text-align: middle-center; height: 310px; -unity-font-style: bold;" />
+        <ui:Button text="start" name="startGame" class="butten" style="background-image: none; background-color: rgb(100, 149, 237); -unity-text-align: middle-center;" />
+        <ui:Button text="unlocks&#10;" name="unlocks" class="butten" style="bottom: -50px;" />
+        <ui:Button text="settings" double-click-selects-word="false" name="settings" class="butten" style="bottom: -100px;" />
+        <ui:VisualElement name="unlocksPanel" style="flex-grow: 1; display: none; background-color: rgb(29, 29, 53); right: 0; bottom: 0; left: 0; top: -200px; position: relative; width: 1000px; align-items: flex-end; justify-content: flex-start; align-self: center; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px;">
+            <ui:Button text="back" name="closeUnlocks" style="width: 120px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="settingsPanel" style="flex-grow: 1; display: none; top: -200px; align-items: flex-end; width: 1000px; align-self: center; background-color: rgb(29, 29, 53); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px;">
+            <ui:Button text="back" name="closeSettings" style="width: 120px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

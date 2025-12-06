@@ -14,6 +14,8 @@ public class Shooter1 : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.Instance.GameStarted)
+            return;
         if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space))
         {
             if(Time.time>= nextFireTime)
@@ -48,3 +50,4 @@ public class Shooter1 : MonoBehaviour
         }
     }
 }
+
