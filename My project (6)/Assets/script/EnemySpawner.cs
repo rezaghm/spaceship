@@ -14,17 +14,21 @@ public class EnemySpawner : MonoBehaviour
     public int maxSpawnInterval = 4;
 
     private int randomPosition;
+    public bool isGameOver = false;
 
     void Start()
     {
         nextSpawnTime = Time.time;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isGameOver) return;
         if (Time.time >= nextSpawnTime)
         {
+            
             // Call the function to create the object.
             SpawnEnemy();
 

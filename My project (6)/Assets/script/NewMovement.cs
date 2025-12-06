@@ -12,32 +12,26 @@ public class NewMovement : MonoBehaviour
     {
         // Get the starting rotation of the object
         initialRotation = transform.rotation;
+
     }
 
-    void Update()
-    {
-        float moveX = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
-        float moveY = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
-         transform.rotation = initialRotation;
 
-        Vector2 movementDirection = new Vector2(moveX, moveY).normalized;
-    }
 
 
     void FixedUpdate()
     {
-        
+
         float moveX = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right
         float moveY = Input.GetAxisRaw("Vertical");   // W/S or Up/Down
 
 
         Vector2 movementDirection = new Vector2(moveX, moveY).normalized;
 
-        
-        
-            // Add a force in the direction of the input
-            rb.AddForce(movementDirection * thrustForce);
-        
+
+
+        // Add a force in the direction of the input
+        rb.AddForce(movementDirection * thrustForce);
+
 
         // --- 3. Max Velocity Control (Clamping) ---
         // If the ship is moving faster than maxSpeed, clamp the velocity
@@ -48,9 +42,11 @@ public class NewMovement : MonoBehaviour
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
 
-       
+
 
 
 
     }
+
+   
 }
