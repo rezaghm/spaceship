@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3087052423790459681}
   - component: {fileID: 4242190455870661015}
   - component: {fileID: -6060331410901558176}
+  - component: {fileID: -6598533236081748245}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -179,3 +180,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAi
   speed: 4
+--- !u!114 &-6598533236081748245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920376522704925062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa6d3da36072e24b86ca7e8e09e6ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::enemyEnergy
+  gemPrefab: {fileID: 5617588234623906959, guid: 28a80fe2f29d4794cb2c17530b18b87f, type: 3}

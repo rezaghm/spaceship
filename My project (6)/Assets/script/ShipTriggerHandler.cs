@@ -1,12 +1,14 @@
 
 
+using TMPro;
 using UnityEngine;
 
 public class ShipTriggerHandler : MonoBehaviour
 {
     public int hitCount = 0;
+    public int energyCount = 0;
     public int maxHits = 15;
-
+    public TextMeshProUGUI energyText;
     private bool isGameOver = false;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +24,17 @@ public class ShipTriggerHandler : MonoBehaviour
                 EndGame();
             }
         }
+        if (other.CompareTag("energyCristal"))
+        {
+            energyCount++;
+            if (energyText != null)
+            {
+                energyText.text = energyCount.ToString();
+            }
+
+            Destroy(other.gameObject);
+        }
+
     }
 
     void EndGame()

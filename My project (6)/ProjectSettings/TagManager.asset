@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - spaceship
+  - energyCristal
   layers:
   - Default
   - TransparentFX
