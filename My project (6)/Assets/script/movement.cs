@@ -4,11 +4,10 @@ using UnityEngine;
 public class movement : MonoBehaviour
 {
     [Header("ship power")]
-    [SerializeField] private float shipAccoleration = 10f;
-    [SerializeField] private float shipMaxVlocity = 10f;
+    
     [SerializeField] private float shipRotationspeed = 10f;
 
-    private Rigidbody2D shipRigidbody;
+    //private Rigidbody2D shipRigidbody;
     private bool isAcceloration = false;
     private bool isStoped = false;
 
@@ -18,7 +17,7 @@ public class movement : MonoBehaviour
 
     private void Start()
     {
-        shipRigidbody = GetComponent<Rigidbody2D>();
+        //shipRigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class movement : MonoBehaviour
     {
         if (isAlive == true)
         {
-            HandleShipAcceleration();
+           
             
             Handle2DAiming();
         }
@@ -34,18 +33,18 @@ public class movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isAcceloration && isAlive)
-        {
-            shipRigidbody.AddForce(shipAccoleration * transform.up);
-            shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity);
+        //if (isAcceloration && isAlive)
+        //{
+        //    shipRigidbody.AddForce(shipAccoleration * transform.up);
+        //    shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity);
 
-        }
-        if (isStoped && isAlive)
-        {
+        //}
+        //if (isStoped && isAlive)
+        //{
             
-            shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity* 0.1f);
+        //    shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity* 0.1f);
 
-        }
+        //}
 
 
 

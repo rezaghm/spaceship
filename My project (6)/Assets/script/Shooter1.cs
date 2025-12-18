@@ -7,7 +7,7 @@ public class Shooter1 : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileSpeed = 0.5f;
+    public float projectileSpeed = 25f;
     public float fireRate=0.5f;
     private float nextFireTime=0f;
     
