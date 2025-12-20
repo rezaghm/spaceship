@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,7 +11,9 @@ public class Shooter1 : MonoBehaviour
     public float projectileSpeed = 25f;
     public float fireRate=0.5f;
     private float nextFireTime=0f;
-    
+    public int energyCount = 0;
+    public TextMeshProUGUI energyText;
+
 
     void Update()
     {
@@ -47,6 +50,19 @@ public class Shooter1 : MonoBehaviour
         else
         {
             Debug.LogWarning("Shooter1: روی prefab گلوله اسکریپت Projectile نیست یا حذف شده.");
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("energyCristal"))
+        {
+            energyCount++;
+            if (energyText != null)
+            {
+                energyText.text = energyCount.ToString();
+            }
+
+            Destroy(other.gameObject);
         }
     }
 }

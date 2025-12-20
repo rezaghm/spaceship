@@ -4,6 +4,12 @@ using UnityEngine;
 public class enemyEnergy : MonoBehaviour
 {
     public GameObject gemPrefab;
+    public Transform playerTransform;
+    public float speed = 10f;
+    private void Start()
+    {
+        playerTransform = GameObject.FindWithTag("Player").transform;
+    }
     private void OnDestroy()
     {
        
@@ -22,4 +28,5 @@ public class enemyEnergy : MonoBehaviour
             Instantiate(gemPrefab, transform.position, Quaternion.identity);
         }
     }
+   
 }

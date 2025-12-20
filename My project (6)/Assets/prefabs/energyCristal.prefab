@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3912920651179018243}
   - component: {fileID: 2859818796159539710}
   - component: {fileID: 6225951270175661998}
+  - component: {fileID: 1019302490115172390}
   m_Layer: 0
   m_Name: energyCristal
   m_TagString: energyCristal
@@ -128,3 +129,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5199999, y: 0.81999993}
   m_Direction: 0
+--- !u!114 &1019302490115172390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5617588234623906959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbec8c5cec644c44494605e90820ae54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::magnetbehavierofcristals
+  pullRadius: 5
+  pullSpeed: 15
+  acceleration: 5

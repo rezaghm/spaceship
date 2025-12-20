@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - spaceship
   - energyCristal
+  - energymagnet
   layers:
   - Default
   - TransparentFX

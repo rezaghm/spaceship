@@ -8,17 +8,12 @@ public class movement : MonoBehaviour
     [SerializeField] private float shipRotationspeed = 10f;
 
     //private Rigidbody2D shipRigidbody;
-    private bool isAcceloration = false;
-    private bool isStoped = false;
+    
 
 
     private bool isAlive = true;
 
 
-    private void Start()
-    {
-        //shipRigidbody = GetComponent<Rigidbody2D>();
-    }
 
     // Update is called once per frame
     private void Update()
@@ -31,41 +26,9 @@ public class movement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        //if (isAcceloration && isAlive)
-        //{
-        //    shipRigidbody.AddForce(shipAccoleration * transform.up);
-        //    shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity);
-
-        //}
-        //if (isStoped && isAlive)
-        //{
-            
-        //    shipRigidbody.linearVelocity = Vector2.ClampMagnitude(shipRigidbody.linearVelocity, shipMaxVlocity* 0.1f);
-
-        //}
-
-
-
-    }
-
-    private void HandleShipAcceleration() {
-        isAcceloration = Input.GetKey(KeyCode.W);
-        isStoped = Input.GetKey(KeyCode.Space);
-        
-
-    }
-    private void HandleShipRorarion() {
-        if (Input.GetKey(KeyCode.A)) { 
-            transform.Rotate(shipRotationspeed * Time.deltaTime *transform.forward);
-
-        }
-        else if(Input.GetKey(KeyCode.D)) {
-            transform.Rotate(-shipRotationspeed * Time.deltaTime * transform.forward);
-        }
     
-    }
+
+    
     private void Handle2DAiming()
     {
         
