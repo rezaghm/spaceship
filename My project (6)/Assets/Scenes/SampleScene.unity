@@ -2009,6 +2009,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &807114684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7176155209077244777, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+  m_PrefabInstance: {fileID: 2903700339775055790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840502450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80bb220532f65a48849562d5d974bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnergyBarUI
 --- !u!1 &808753215
 GameObject:
   m_ObjectHideFlags: 0
@@ -3558,6 +3569,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1840502450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8108825592861371467, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+  m_PrefabInstance: {fileID: 2903700339775055790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1840502451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3869704933520567723, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+  m_PrefabInstance: {fileID: 2903700339775055790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840502450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+--- !u!114 &1840502453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840502450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5883af6a672b72347a480a8a3382f8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BarManager
+  uiDocument: {fileID: 1840502451}
 --- !u!1 &1845000246
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,6 +4180,14 @@ PrefabInstance:
       propertyPath: energyText
       value: 
       objectReference: {fileID: 853785666}
+    - target: {fileID: 6474684834858644133, guid: 3c8ffb6e00370454c84bb1060fe80709, type: 3}
+      propertyPath: energyBarUI
+      value: 
+      objectReference: {fileID: 807114684}
+    - target: {fileID: 6474684834858644133, guid: 3c8ffb6e00370454c84bb1060fe80709, type: 3}
+      propertyPath: crystalBarController
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6765456355447893240, guid: 3c8ffb6e00370454c84bb1060fe80709, type: 3}
       propertyPath: m_Interpolate
       value: 1
@@ -4299,11 +4347,79 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7684947259850048318, guid: 67bef94c23300ab428c9636705780bce, type: 3}
+      propertyPath: energyBarController
+      value: 
+      objectReference: {fileID: 1840502453}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67bef94c23300ab428c9636705780bce, type: 3}
+--- !u!1001 &2903700339775055790
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3869704933520567723, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 90a2178eee00b114cb655f0449b995ab, type: 3}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394511992335816233, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108825592861371467, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      propertyPath: m_Name
+      value: crystalBarUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8108825592861371467, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840502453}
+  m_SourcePrefab: {fileID: 100100000, guid: 11fe77c45821df441b99a2712ab90c2d, type: 3}
 --- !u!1001 &5061482289412419345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4432,3 +4548,4 @@ SceneRoots:
   - {fileID: 1627153125}
   - {fileID: 1114335246}
   - {fileID: 1230136100}
+  - {fileID: 2903700339775055790}

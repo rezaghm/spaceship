@@ -1,8 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/gameOver2.uss?fileID=7433441132597879392&amp;guid=cf366590f5a3a9b4a9b315b4338d0a53&amp;type=3#gameOver2" />
-    <ui:VisualElement name="container2" style="flex-grow: 1; display: none; -unity-font-style: bold; -unity-background-image-tint-color: rgb(0, 0, 119); background-color: rgba(0, 0, 119, 0.47); bottom: 0; right: 0; top: 200px; left: 0; width: 880px; height: 550px; align-self: center; align-items: stretch; align-content: flex-start; overflow: visible; max-height: 550px; justify-content: flex-start; -unity-background-scale-mode: stretch-to-fill; background-position-y: center;">
-        <ui:Label text="Game Over!" name="header" class="heather" style="height: 163px; width: 639px; top: auto;" />
+    <ui:VisualElement name="container2" style="flex-grow: 1; display: none; -unity-font-style: bold; -unity-background-image-tint-color: rgb(0, 0, 119); background-color: rgba(0, 0, 119, 0.47); bottom: 0; right: 0; top: 200px; left: 0; width: 1100px; height: 550px; align-self: center; align-items: stretch; align-content: flex-start; overflow: visible; max-height: 550px; justify-content: flex-start; -unity-background-scale-mode: stretch-to-fill; background-position-y: center;">
+        <ui:Label text="Game Over!" name="header" class="heather" style="height: 182px; width: 870px; top: auto; -unity-font-definition: url(&quot;project://database/Assets/SimplePixelUI/fonts/Font1/pixelfont.ttf?fileID=12800000&amp;guid=b6349d08a5335cd4aa534282435d11cc&amp;type=3#pixelfont&quot;); bottom: auto; right: auto; left: auto;" />
         <ui:Button text="restart" name="restart" class="button" />
-        <ui:Button text="exit" name="exit" class="button" style="bottom: -50px;" />
+        <ui:Button name="exit" class="button" style="bottom: -50px; background-color: rgba(55, 55, 55, 0); -unity-background-image-tint-color: rgb(255, 255, 255); background-image: url(&quot;project://database/Assets/pixelarts/button%2011.png?fileID=-4358489335881194211&amp;guid=fd3f09db2ec17e04aaed17d280c929f1&amp;type=3#button 11_0&quot;);" />
     </ui:VisualElement>
 </ui:UXML>

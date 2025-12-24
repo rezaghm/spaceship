@@ -15,7 +15,7 @@ public class mainMenuEvents : MonoBehaviour
 
     private Button closeUnlocksButton;
     private Button closeSettingsButton;
-
+    public BarManager energyBarController;
     private void Awake()
     {
         document = GetComponent<UIDocument>();
@@ -58,6 +58,7 @@ public class mainMenuEvents : MonoBehaviour
         Time.timeScale = 1; // بازی شروع می‌شود
 
         HealthBarManager.Instance.ShowBar();
+        energyBarController.ShowEnergyBar();
     }
 
     private void OnUnlocksClicked(ClickEvent evt)
