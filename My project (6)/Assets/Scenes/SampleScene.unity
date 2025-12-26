@@ -4192,6 +4192,14 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7350480564365310491, guid: 3c8ffb6e00370454c84bb1060fe80709, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465335652610638510, guid: 3c8ffb6e00370454c84bb1060fe80709, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3973224594531776548, guid: 3c8ffb6e00370454c84bb1060fe80709, type: 3}
     m_RemovedGameObjects: []
